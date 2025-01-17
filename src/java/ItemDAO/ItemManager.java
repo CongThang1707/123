@@ -19,7 +19,7 @@ public class ItemManager {
     public Connection getConnection() throws Exception {
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            String connectionString = "jdbc:sqlserver://localhost:1433;database=SampleDB;encrypt=true;trustServerCertificate=true;";
+            String connectionString = "jdbc:sqlserver://localhost:1433;database=SampleDB";
             Connection cnn = DriverManager.getConnection(connectionString, "sa", "123");
             return cnn;
         } catch (ClassNotFoundException | SQLException ex) {
